@@ -22,7 +22,7 @@ export const confirmCart = (payload) => {
         status: 'loading',
       });
 
-      const response = await fetch(`${URL_API}/carrito.json`, {
+      const response = await fetch(`${URL_API}/order.json`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

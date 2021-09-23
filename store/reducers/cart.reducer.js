@@ -14,6 +14,7 @@ const CartReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case ADD_ITEM:
       const index = state.items.findIndex(item => item.id === action.item.id);
+      console.log(index);
       if (index === -1) {
         const item = { ...action.item, quantity: 1 };
         const updateCart = [...state.items, item];
